@@ -160,6 +160,13 @@ body{
         width: auto;
     }
 
+    .apresentacao__links__navegacao{
+        gap: 10px;
+        font-family: var(--fonte-segundaria);
+        font-size: 1rem;
+
+    }
+
     .rodape{
         padding: auto;
     }
