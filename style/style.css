@@ -3,7 +3,7 @@
 :root{
     --cor-primaria: #000000;
     --cor-segundaria: #f6f6f6;
-    --cor-terciaria: #850604;
+    --cor-terciaria: #8b0c09;
     --cor-hover: #272727;
 
     --fonte-principal: 'Krona One' , sans-serif;
@@ -39,13 +39,13 @@ body{
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
-    text-decoration: none
+    text-decoration: none;
+    transition: all ease 0.5s;
 }
 
 .apresentacao{
     padding: 5% 13%;
     display : flex;
-    align-items: center;
     justify-content: space-between;
     gap: 82px;
 }
@@ -60,10 +60,10 @@ body{
     gap: 40px ;
 
 }
-
 .apresentacao__conteudo__titulo{
     font-size: 2.25rem;
     font-family:var(--fonte-segundaria);
+    color: var(--cor-terciaria);
 }
 
 .apresentacao__conteudo__titulo2{
@@ -96,6 +96,7 @@ body{
 .apresentacao__links__navegacao{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
     width: 50%;
@@ -107,15 +108,24 @@ body{
     padding: 21.5px 0;
     text-decoration: none;
     font-family: var(--fonte-segundaria);
+    transition: all ease 0.5s;
 
+}
+
+.apresentacao__links__navegacao:hover{
+      border: 2px solid #e9e1e1;
+      width: 51%;
 }
 
 .apresentacao__links__link:hover{
 
   background-color: var(--cor-hover);
+  
 }
 
 .rodape{
+    display: flex;
+    justify-content: space-around;
     padding: 24px;
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
@@ -124,16 +134,41 @@ body{
     font-size: 1.5rem;
 }
 
+.contato{
+    display: block;
+    text-align: start;
+    
+}
+
+.email{
+    font-size: 16px;
+}
+
+.telefone{
+    font-size: 16px;
+}
+
 .apresentacao__conteudo__texto a{
     text-decoration: none;
     color: var(--cor-terciaria);
 }
 
-
-
-.imagem_foto{
-    width: 50%;
+.apresentacao img {
+     border-radius: 6px;
+     
 }
+
+.cabecalho__menu__link:hover{
+    color: var(--cor-segundaria);
+    transition: all ease 0.5s;
+}
+
+.apresentacao__conteudo__texto a:hover{
+color: var(--cor-segundaria);
+    transition: all ease 0.5s;
+}
+
+
     
 @media (max-width:1200px) {
 
@@ -154,6 +189,8 @@ body{
     .apresentacao{
         flex-direction: column-reverse;
         padding: 5%;
+        text-align: center;
+        align-items: center;
     }
 
     .apresentacao__conteudo{
@@ -171,5 +208,14 @@ body{
         padding: auto;
     }
     
-    
+}
+
+@media(max-width:500px){
+   .apresentacao{
+    margin: 1rem;
+   }
+
+   .rodape{
+    font-size: 16px;
+   }
 }
